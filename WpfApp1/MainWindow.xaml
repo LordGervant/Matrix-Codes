@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:dataGrid2D="http://gu.se/DataGrid2D"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="1251">
+    <Grid x:Name="grid1" Margin="0,0,2,0">
+
+        <Button x:Name="Button1" Content="Создать матрицу" Margin="599,30,533,636" Click="Button1_Click"/>
+        <TextBox x:Name="textBox1" Margin="10,46,654,631"/>
+        <Label x:Name="label2" Content="Введите предложение" Margin="10,10,654,673"/>
+        <ComboBox x:Name="ComboBox1" Margin="645,149,533,524" RenderTransformOrigin="1.063,0.674" />
+        <ComboBox x:Name="ComboBox2" Margin="764,149,417,524" />
+        <Label x:Name="label5" Content="" Margin="645,91,417,575" />
+        <Button x:Name="Button2" Content="Создать искаженную матрицу" Margin="645,199,417,486" Click="Button2_Click" RenderTransformOrigin="0.753,0.294"/>
+        <DataGrid x:Name="Matrix1" Margin="10,148,960,11" GridLinesVisibility="None">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="1" Width="30"  Binding="{Binding One}"/>
+                <DataGridTextColumn Header="2" Width="30" Binding="{Binding Two}"/>
+                <DataGridTextColumn Header="3" Width="30" Binding="{Binding Three}"/>
+                <DataGridTextColumn Header="4" Width="30" Binding="{Binding Four}"/>
+                <DataGridTextColumn Header="5" Width="30" Binding="{Binding Five}"/>
+                <DataGridTextColumn Header="6" Width="30" Binding="{Binding Six}"/>
+                <DataGridTextColumn Header="7" Width="30" Binding="{Binding Seven}"/>
+                <DataGridTextColumn Header="8" Width="*" Binding="{Binding Eight}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="Matrix2" Margin="304,148,635,11" GridLinesVisibility="None">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="1" Width="30" Binding="{Binding One}"/>
+                <DataGridTextColumn Header="2" Width="30" Binding="{Binding Two}"/>
+                <DataGridTextColumn Header="3" Width="30" Binding="{Binding Three}"/>
+                <DataGridTextColumn Header="4" Width="30" Binding="{Binding Four}"/>
+                <DataGridTextColumn Header="5" Width="30" Binding="{Binding Five}"/>
+                <DataGridTextColumn Header="6" Width="30" Binding="{Binding Six}"/>
+                <DataGridTextColumn Header="7" Width="30" Binding="{Binding Seven}"/>
+                <DataGridTextColumn Header="8" Width="30" Binding="{Binding Eight}"/>
+                <DataGridTextColumn Header="Пбит" Width="*" Binding="{Binding ProvBit}"/>
+            </DataGrid.Columns>            
+        </DataGrid>
+        <DataGrid x:Name="Matrix3" Margin="847,149,73,10" GridLinesVisibility="None">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="1" Width="30" Binding="{Binding One}"/>
+                <DataGridTextColumn Header="2" Width="30" Binding="{Binding Two}"/>
+                <DataGridTextColumn Header="3" Width="30" Binding="{Binding Three}"/>
+                <DataGridTextColumn Header="4" Width="30" Binding="{Binding Four}"/>
+                <DataGridTextColumn Header="5" Width="30" Binding="{Binding Five}"/>
+                <DataGridTextColumn Header="6" Width="30" Binding="{Binding Six}"/>
+                <DataGridTextColumn Header="7" Width="30" Binding="{Binding Seven}"/>
+                <DataGridTextColumn Header="8" Width="30" Binding="{Binding Eight}"/>
+                <DataGridTextColumn Header="Пбит" Width="*" Binding="{Binding ProvBit}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Button3" Content="Подсветить ячейки" Margin="645,238,417,447" Click="Button3_Click" RenderTransformOrigin="0.753,0.294"/>
+        <Button x:Name="Button4" Content="Очистить все таблицы" Margin="645,277,417,408" Click="Button4_Click" RenderTransformOrigin="0.753,0.294"/>
+    </Grid>
+</Window>
